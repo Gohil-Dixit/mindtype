@@ -14,17 +14,17 @@
 
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "allowImportingTsExtensions": true,
-    "moduleResolution": "bundler",
 
+    "allowImportingTsExtensions": true,
+    "noEmit": true,                <<⭐ THIS IS THE FIX>>
+
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "types": ["node", "vite/client"],
 
     "paths": {
       "@/*": ["./client/src/*"],
       "@shared/*": ["./shared/*"]
-    },
-
-    "outDir": "./dist"
+    }
   }
 }
