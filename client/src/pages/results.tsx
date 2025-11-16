@@ -69,7 +69,7 @@ export default function Results() {
     if (parsedResults.contentId) {
       submitMutation.mutate({
         username: storedUsername,
-        contentId: parsedResults.contentId,
+        contentId: String(parsedResults.contentId),
         wpm: parsedResults.wpm.toString(),
         accuracy: parsedResults.accuracy.toString(),
         testDuration: parsedResults.testDuration,
